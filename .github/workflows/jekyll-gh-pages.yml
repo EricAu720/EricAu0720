@@ -18,4 +18,12 @@ jobs:
           path: ./_site
 
       - name: Deploy to GitHub Pages
+  jobs:
+    deploy:
+      runs-on: ubuntu-latest
+      permissions:
+        id-token: write  # Required for actions/deploy-pages
+      steps:
+        - name: Deploy pages
+          uses: actions/deploy-pages@v4
         uses: actions/deploy-pages@v4  # Optional, if deploying
