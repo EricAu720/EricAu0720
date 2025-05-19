@@ -9,12 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/jekyll-build-pages@v1
+      - uses: actions/checkout@v4
+      - uses: actions/jekyll-build-pages@v1.0.13
         with:
           source: ./docs # Adjust as needed
           destination: ./docs/_site
-      - uses: actions/upload-pages-artifact@v1
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
   deploy:
