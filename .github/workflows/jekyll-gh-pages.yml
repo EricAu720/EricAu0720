@@ -12,8 +12,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/jekyll-build-pages@v1
         with:
-          source: ./  # Adjust as needed
-          destination: ./_site
+          source: ./docs # Adjust as needed
+          destination: ./docs/_site
       - uses: actions/upload-pages-artifact@v1
         with:
           path: ./_site
